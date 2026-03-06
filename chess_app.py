@@ -1,8 +1,8 @@
 import streamlit as st
 from google import genai
+import os
 
-# Your API key
-client = genai.Client(api_key="AIzaSyCkV7h5kpmogV_tTCe7D-a6L3uwwEXffI4")
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 # Page design
 st.set_page_config(page_title="Chess Coach AI", page_icon="♟️")
